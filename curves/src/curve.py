@@ -98,24 +98,5 @@ class Curve:
             self.days[index] = day * oneday_unix
 
 
-def create_curves(f_list=[0.5, 1.0], factor_list=[0.5, 1.0], fs=(5,10),
-                  hyp_funcs=[np.sinh, np.sin, np.cosh, np.cos, np.tanh]):
-    """
-    Loops trough each setting and creates a hyp function for each setting.
-    :param f_list:
-    :param factor_list:
-    :param fs:
-    :param hyp_funcs:
-    :return:
-    """
-
-    curves = []
-
-    for func in hyp_funcs:
-        for f in f_list:
-            for factor in factor_list:
-                curve = Curve(func, fs, f, factor)
-                curves.append(curve)
-    return curves
 
 
