@@ -8,11 +8,14 @@ class IOhelper:
     """
     Simple class for reading and writing 2d arrays in to a .csv
     """
-    def __init__(self, path_name):
-        if self.check_path(path_name):
-            self.path_name = path_name
+    def __init__(self, path_name, google_colab=False):
+        if not google_colab:
+            if self.check_path(path_name):
+                self.path_name = path_name
+            else:
+                raise IOError("Not a valid directory")
         else:
-            raise IOError("Not a valid directory")
+            self.path_name = path_name
 
     def write_2d_csv(self, data, name):
         with open(self.path_name + name + ".csv", "w", newline="") as f:
