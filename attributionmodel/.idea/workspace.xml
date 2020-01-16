@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e397cb7-c435-4cc5-b1ad-f3c8e9e06a5c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1WAZhheBocVCALdRD8D6mRHP45F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../curves" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AttributionModel" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="attributionmodel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/attribution/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/models" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/models/AttributionModel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e397cb7-c435-4cc5-b1ad-f3c8e9e06a5c" name="Default Changelist" comment="" />
+      <created>1578594480991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578594480991</updated>
+      <workItem from="1578594486213" duration="9352000" />
+      <workItem from="1578640898428" duration="599000" />
+      <workItem from="1578642591379" duration="1693000" />
+      <workItem from="1578756080171" duration="599000" />
+      <workItem from="1579003271032" duration="598000" />
+      <workItem from="1579091680958" duration="2955000" />
+      <workItem from="1579176157417" duration="305000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="70" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578596487527">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="70" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1578596487527" />
+    <state x="378" y="375" width="424" height="491" key="FileChooserDialogImpl" timestamp="1579176173869">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="378" y="375" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1579176173869" />
+    <state width="908" height="370" key="GridCell.Tab.0.bottom" timestamp="1579092277325">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="908" height="370" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1579092277325" />
+    <state width="908" height="370" key="GridCell.Tab.0.center" timestamp="1579092277325">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="908" height="370" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1579092277325" />
+    <state width="908" height="370" key="GridCell.Tab.0.left" timestamp="1579092277324">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="908" height="370" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1579092277324" />
+    <state width="908" height="370" key="GridCell.Tab.0.right" timestamp="1579092277325">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="908" height="370" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1579092277325" />
+    <state x="70" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1578594542886">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="70" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1578594542886" />
+    <state x="203" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1579092239038">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="203" y="381" key="com.intellij.ide.util.TipDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1579092239038" />
+    <state x="234" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1578595532313">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="234" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1578595532313" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/attributionmodel$AttributionModel.coverage" NAME="AttributionModel Coverage Results" MODIFIED="1579176191049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
+  </component>
+</project>
