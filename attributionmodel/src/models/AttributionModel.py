@@ -2,11 +2,8 @@ from keras import Input, Model
 from keras.layers import Embedding, Dense, LSTM, RepeatVector, Concatenate, Activation, Dot, Subtract, Flatten
 from keras.optimizers import Adam
 import numpy as np
-from keras_preprocessing.text import Tokenizer
 from keras.utils import to_categorical
-from src.models.CustomSoftMax import CustomSoftMax
 import keras.backend as K
-from keras.preprocessing.sequence import pad_sequences
 
 
 class AttributionModel:
