@@ -1,12 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt # For ploting
-from tqdm import tqdm
-import datetime
 
 
-from src.IOhelper import IOhelper
-from src.generate import Generate
-from src.touchpoints import TouchPoints
+
 
 """
 Returns a normalized hyperbolic curve. Noise can be added to each curve. 

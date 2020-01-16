@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b269883-9baf-41bc-a917-f727fa88187f" name="Default Changelist" comment="" />
+    <list default="true" id="7b269883-9baf-41bc-a917-f727fa88187f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/curve.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/curve.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +35,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1W57XttyF8qv092miERK6BtwHkw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -126,21 +130,34 @@
       <workItem from="1579003271427" duration="9779000" />
       <workItem from="1579091680558" duration="9904000" />
       <workItem from="1579176177140" duration="285000" />
+      <workItem from="1579183274821" duration="837000" />
     </task>
+    <task id="LOCAL-00001" summary="Separated main and curves">
+      <created>1579183358530</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579183358530</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Separated main and curves" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated main and curves" />
   </component>
   <component name="WindowStateProjectService">
     <state x="453" y="211" width="1084" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578428272388">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="453" y="211" width="1084" height="719" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1578428272388" />
-    <state x="839" y="150" width="1071" height="814" key="CommitChangelistDialog2" timestamp="1579183335279">
+    <state x="839" y="150" width="1071" height="814" key="CommitChangelistDialog2" timestamp="1579183358399">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="839" y="150" width="1071" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1579183335279" />
+    <state x="839" y="150" width="1071" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1579183358399" />
     <state x="1129" y="400" width="424" height="491" key="FileChooserDialogImpl" timestamp="1578580716120">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -165,6 +182,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1579010546843" />
+    <state x="1052" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1579183360650">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="1052" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1579183360650" />
     <state x="650" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579003273030">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
