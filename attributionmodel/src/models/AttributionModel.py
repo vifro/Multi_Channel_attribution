@@ -1,9 +1,9 @@
-from keras import Input, Model
-from keras.layers import Embedding, Dense, LSTM, RepeatVector, Concatenate, Activation, Dot, Subtract, Flatten
-from keras.optimizers import Adam
+from tensorflow.keras import Input, Model
+from tensorflow.keras.layers import Embedding, Dense, LSTM, RepeatVector, Concatenate, Activation, Dot, Subtract, Flatten
+from tensorflow.keras.optimizers import Adam
 import numpy as np
-from keras.utils import to_categorical
-import keras.backend as K
+from tensorflow.keras.utils import to_categorical
+import tensorflow.keras.backend as K
 
 
 class AttributionModel:
@@ -201,13 +201,15 @@ def main():
         "class_weights": {0: 0.5, 1: 1.5},
     }
     # Binary encoder
-
     X = [[0, 1], [2, 3], [4, 5], [6, 7]]
     Xt = np.array([[200, 300], [0, 100], [14, 1200], [230, 400]])
     y = np.array([0, 1, 0, 1])
     X = np.array(list(map(lambda x: to_categorical(x, num_classes=vocab_size), X)), ndmin=3)
+    print(Xt.shape)
     Xt = Xt.reshape(-1, seq_len, 1)
-    print(X)
+
+    print(X.shape)
+    print(Xt.shape)
     data = {
         "X_train": X,
         "X_val": X,
