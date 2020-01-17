@@ -85,8 +85,8 @@ class Curve:
         # Convert to unix timestamps
         self._days()
 
-        # Sort in ascending order
-        self.days.sort()
+        # Sort in descending  order
+        self.days = -np.sort(-self.days)
 
     def _days(self):
         """

@@ -56,10 +56,10 @@ def main():
 
     distributions = []
     answers = []
-    nr_samples = 100000
+    nr_samples = 100
 
     gen = Generate(touchpoints, curves, snr_interval=(16, 20))
-    paths, times, answers = gen.generate_distribution(100000)
+    paths, times, answers = gen.generate_distribution(nr_samples)
 
     print(paths[0])
     print(len(paths[0]))
