@@ -135,9 +135,9 @@ class AttributionModel:
         :return: Returns the prediciton for the dataset.
         """
         if x_test is None:
-            return self.model.predict([self.X_test, self.s2, self.X_test_time])
+            return self.model.predict(x=[self.X_test, self.s2, self.X_test_time])
         else:
-            return self.model.predict(x_test, x_test_time)
+            return self.model.predict(x=[x_test, self.s2, x_test_time])
 
     def save_model(self, name="attribution_model.h5"):
         self.model.save_weights(name)
@@ -237,7 +237,8 @@ def main():
     attrmod = AttributionModel(config=config, data=data)
     attrmod.build_model()
     attrmod.train_model()
-
+    attrmod.evaluate_model()
+    print(attrmod.model_predict())
 
 if __name__ == "__main__":
     main()
