@@ -130,8 +130,8 @@ class AttributionModel:
     def model_predict(self, x_test=None, x_test_time=None):
         """
         Predicts on the given specified data, or the incoming parameters.
-        :param x_test_time:
-        :param x_test:
+        :param x_test_time: User path times
+        :param x_test: User paths
         :return: Returns the prediciton for the dataset.
         """
         if x_test is None:
