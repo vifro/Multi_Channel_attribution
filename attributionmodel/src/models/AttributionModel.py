@@ -56,8 +56,7 @@ class AttributionModel:
         self.y_test = data['y_test']
 
         # Initialized matrix of np.zeroes(training_samples, lstm_units)
-        print(self.X_train.shape[0])
-        print(self.lstm_units)
+        
         self.s0 = np.zeros((self.X_train.shape[0], self.hidden_len))
         self.s1 = np.zeros((self.X_val.shape[0], self.hidden_len))
         self.s2 = np.zeros((self.X_test.shape[0], self.hidden_len))
@@ -116,7 +115,8 @@ class AttributionModel:
                                       epochs=self.epochs,
                                       batch_size=self.batch_size,
                                       verbose=2,
-                                      validation_data=([self.X_val, self.s1, self.X_val_time], self.y_val)
+                                      validation_data=([self.X_val, self.s1,
+                                                        self.X_val_time], self.y_val)
                                       )
 
     def evaluate_model(self):
@@ -125,7 +125,19 @@ class AttributionModel:
         @return:
         """
         scores = self.model.evaluate([self.X_test, self.s2, self.X_test_time], self.y_test, verbose=1)
-        print("%s: %.2%%" % (self.model.metrics_names[1], scores[1]*100))
+        print("%s: %ds.2%%" % (self.model.metrics_names[1], scores[1]*100))
+
+    def model_predict(self, x_test=None, x_test_time=None):
+        """
+        Predicts on the given specified data, or the incoming parameters.
+        :param x_test_time:
+        :param x_test:
+        :return: Returns the prediciton for the dataset.
+        """
+        if x_test is None:
+            return self.model.predict(self.X_test, self.X_test_time)
+        else:
+            return self.model.predict(x_test, x_test_time)
 
     def save_model(self, name="attribution_model.h5"):
         self.model.save_weights(name)
@@ -205,11 +217,11 @@ def main():
     Xt = np.array([[200, 300], [0, 100], [14, 1200], [230, 400]])
     y = np.array([0, 1, 0, 1])
     X = np.array(list(map(lambda x: to_categorical(x, num_classes=vocab_size), X)), ndmin=3)
-    print(Xt.shape)
+    #print(Xt.shape)
     Xt = Xt.reshape(-1, seq_len, 1)
 
-    print(X.shape)
-    print(Xt.shape)
+    #print(X.shape)
+    #print(Xt.shape)
     data = {
         "X_train": X,
         "X_val": X,
