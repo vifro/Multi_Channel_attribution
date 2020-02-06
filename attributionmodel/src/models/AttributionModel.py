@@ -135,7 +135,7 @@ class AttributionModel:
         :return: Returns the prediciton for the dataset.
         """
         if x_test is None:
-            return self.model.predict(self.X_test, self.X_test_time)
+            return self.model.predict(self.X_test, self.s2, self.X_test_time)
         else:
             return self.model.predict(x_test, x_test_time)
 
