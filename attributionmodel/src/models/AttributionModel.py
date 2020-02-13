@@ -137,7 +137,7 @@ class AttributionModel:
         if x_test is None:
             return self.model.predict(x=[self.X_test, self.s2, self.X_test_time])
         else:
-            s2 = np.zeros((self.X_test.shape[0], self.hidden_len))
+            s2 = np.zeros((x_test.shape[0], self.hidden_len))
             return self.model.predict(x=[x_test, s2, x_test_time])
 
     def save_model(self, name="attribution_model.h5"):
