@@ -127,7 +127,7 @@ class AttributionModel:
         scores = self.model.evaluate([self.X_test, self.s2, self.X_test_time], self.y_test, verbose=1)
         print("%s: %ds.2%%" % (self.model.metrics_names[1], scores[1]*100))
 
-    def model_predict(self, x_test=None, x_test_time=None):
+    def predict(self, x_test=None, x_test_time=None):
         """
         Predicts on the given specified data, or the incoming parameters.
         :param x_test_time: User path times
@@ -137,7 +137,8 @@ class AttributionModel:
         if x_test is None:
             return self.model.predict(x=[self.X_test, self.s2, self.X_test_time])
         else:
-            return self.model.predict(x=[x_test, self.s2, x_test_time])
+            s2 = np.zeros((self.X_test.shape[0], self.hidden_len))
+            return self.model.predict(x=[x_test, s2, x_test_time])
 
     def save_model(self, name="attribution_model.h5"):
         self.model.save_weights(name)
