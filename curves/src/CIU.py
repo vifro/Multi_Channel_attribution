@@ -9,7 +9,6 @@ class CIU:
     def hello_name(self):
         print("Hello. what are you doing")
 
-
     def findmin(self):
         pass
 
