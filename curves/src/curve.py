@@ -21,6 +21,7 @@ class Curve:
         self.x = None
         self.y = None
         self.days = None
+        self.shifter = (-3, 3)
 
     def hyperbolic(self):
         """
@@ -31,7 +32,7 @@ class Curve:
 
         self.x = np.arange(self.fs)
         # compute the value (amplitude) of the sin wave at the for each sample
-        self.y = self.factor*self.hyp_func(2*np.pi*self.f * (self.x/self.fs))
+        self.y = self.factor*self.hyp_func(2*np.pi*self.f * (self.x/self.fs)) + np.random.randint(self.shifter[0], self.shifter[1])
         self._normalize()
         self.time_distribution()
 
