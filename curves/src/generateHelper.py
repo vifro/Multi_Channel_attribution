@@ -132,19 +132,19 @@ class GenerateHelper():
             raise Exception("Time type exception")
         return time_dist
 
-    def mock_data(self, timestep, features, time_type, nr_days):
+    def mock_data(self, timestep, touch_dict, time_type, nr_days):
         """
         Creates each possible outcome for one specific timestep
 
         :param timestep: in which step of time the values should be generated
-        :param features: The number of possible features
+        :param touch_dict: The number of possible features
         :param time_type:(int) 1 for hours, 2 ,for minutes, 3 for seconds.
         :param nr_days: ( int)
         """
         paths = []
         times = []
 
-        for feature in features:
+        for feature in touch_dict.values():
             for i in self.get_time(time_type, nr_days):
                 # Create the times series
                 path_series = np.zeros(timestep[1])
