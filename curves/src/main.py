@@ -30,6 +30,7 @@ def create_curves(f_list=[0.5, 1.0], factor_list=[0.5, 1.0], fs=(5,10),
 
 def main():
 
+
     f_list = [0.5, 1.0]
     factor_list = [0.5, 1.0]
     fs = (5, 15)
@@ -82,9 +83,15 @@ if __name__ == "__main__":
     main()
 
 
-# TODO: Next Phase
-#  1. Create time data for each step,
-#  2. Make the paths random, which means that they can be of length [n1, n2]
-#  3- Create Three different characeristics?
-#  4. Implement the CIU Module.
+# TODO : IMplement CIU form notebook
+
+# TODO: CHeck time generation, and build one similar for the Cmin/Cmax testing
+
+# TODO: Implement everything from notebook to here.
+
+# TODO: CHeck values again.
+
+
+
+#
 
