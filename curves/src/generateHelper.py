@@ -122,11 +122,11 @@ class GenerateHelper():
         hours = 24
 
         if time_type is 1:
-            time_dist = np.array([[i] for i in range(hours*days)]) * minutes * seconds
+            time_dist = np.array([[i] for i in range(hours*days + 1)])*minutes*seconds
         elif time_type is 2:
-            time_dist = np.array([[i] for i in range(hours*days* minutes)]) * seconds
+            time_dist = np.array([[i] for i in range(hours*days*minutes + 1)])*seconds
         elif time_type is 3:
-            time_dist = np.array([[i] for i in range(hours*days* minutes * seconds)])
+            time_dist = np.array([[i] for i in range(hours*days*minutes*seconds + 1)])
         else:
             print("Not a valid time_type")
             raise Exception("Time type exception")
