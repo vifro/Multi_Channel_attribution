@@ -132,11 +132,10 @@ class GenerateHelper():
             raise Exception("Time type exception")
         return time_dist
 
-    def mock_data(self, timestep, touch_dict, time_type, nr_days):
+    def mock_data(self, time_step, touch_dict, time_type, nr_days):
         """
         Creates each possible outcome for one specific timestep
-
-        :param timestep: in which step of time the values should be generated
+        :param time_step: in which step of time the values should be generated
         :param touch_dict: The number of possible features
         :param time_type:(int) 1 for hours, 2 ,for minutes, 3 for seconds.
         :param nr_days: ( int)
@@ -147,16 +146,47 @@ class GenerateHelper():
         for feature in touch_dict.values():
             for i in self.get_time(time_type, nr_days):
                 # Create the times series
-                path_series = np.zeros(timestep[1])
-                time_series = np.zeros(timestep[1])
-                # Add the values
-                path_series[timestep[0]] = feature
-                time_series[timestep[0]] = i
-                paths.append(path_series)
-                times.append(time_series)
+                data = self.get_data(i, feature, time_step[0], time_step[1])
+                paths.append(data[0])
+                times.append(data[1])
+
         times = np.array(times)
         times = times.reshape(-1, len(paths[0]), 1)
         paths = np.array(
             list(map(lambda x: to_categorical(x, num_classes=self.vocab_size),
                      paths)), ndmin=3)
         return paths, times
+    
+    def mock_data_one(self, time_step, feature, time_type, nr_days):
+        """
+        Creates each possible outcome for one specific timestep
+
+        :param time_step: in which step of time the values should be generated
+        :param feature: One of the possible features.
+        :param time_type:(int) 1 for hours, 2 ,for minutes, 3 for seconds.
+        :param nr_days: ( int)
+        """
+        paths = []
+        times = []
+
+        for i in self.get_time(time_type, nr_days):
+            # Create the times series
+            data = self.get_data(i, feature, time_step[0], time_step[1])
+            paths.append(data[0])
+            times.append(data[1])
+        times = np.array(times)
+        times = times.reshape(-1, len(paths[0]), 1)
+        paths = np.array(
+            list(map(lambda x: to_categorical(x, num_classes=self.vocab_size),
+                     paths)), ndmin=3)
+        return paths, times
+
+    def get_data(self, i, feature, time_step, total_steps):
+        """
+
+        """
+        path_series = np.zeros(total_steps)
+        time_series = np.zeros(total_steps)
+        path_series[time_step[0]] = feature
+        time_series[time_step[0]] = i
+        return path_series, time_series
