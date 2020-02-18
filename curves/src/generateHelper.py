@@ -145,7 +145,7 @@ class GenerateHelper():
         times = []
 
         for feature in features:
-            for i in self.get_time(time_type, timestep[1]):
+            for i in self.get_time(time_type, nr_days):
                 # Create the times series
                 path_series = np.zeros(timestep[1])
                 time_series = np.zeros(timestep[1])
