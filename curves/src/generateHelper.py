@@ -189,4 +189,6 @@ class GenerateHelper():
         time_series = np.zeros(total_steps)
         path_series[time_step] = feature
         time_series[time_step] = i
+        print(path_series)
+        print(time_series)
         return path_series, time_series
