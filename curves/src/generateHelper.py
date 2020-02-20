@@ -152,9 +152,7 @@ class GenerateHelper():
 
         times = np.array(times)
         times = times.reshape(-1, len(paths[0]), 1)
-        paths = np.array(
-            list(map(lambda x: to_categorical(x, num_classes=self.vocab_size),
-                     paths)), ndmin=3)
+
         return paths, times
     
     def mock_data_one(self, time_step, feature, time_type, nr_days):
@@ -185,7 +183,7 @@ class GenerateHelper():
         """
         path_series = np.array([np.zeros(self.vocab_size)]*total_steps)
         time_series = np.zeros(total_steps)
-        paths = np.array(
+        path_series = np.array(
             list(map(lambda x: to_categorical(x, num_classes=self.vocab_size),
                      path_series)), ndmin=3)
         path_series[time_step][feature] = 1
