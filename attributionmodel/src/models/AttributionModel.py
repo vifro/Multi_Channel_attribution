@@ -1,5 +1,5 @@
 from tensorflow.keras import Input, Model
-from tensorflow.keras.layers import Embedding, Dense, LSTM, RepeatVector, Concatenate, Activation, Dot, Subtract, Flatten
+from tensorflow.keras.layers import Dense, LSTM, RepeatVector, Concatenate, Activation, Dot, Subtract, Flatten
 from tensorflow.keras.optimizers import Adam
 import numpy as np
 from tensorflow.keras.utils import to_categorical
@@ -56,7 +56,6 @@ class AttributionModel:
         self.y_test = data['y_test']
 
         # Initialized matrix of np.zeroes(training_samples, lstm_units)
-        
         self.s0 = np.zeros((self.X_train.shape[0], self.hidden_len))
         self.s1 = np.zeros((self.X_val.shape[0], self.hidden_len))
         self.s2 = np.zeros((self.X_test.shape[0], self.hidden_len))
@@ -78,11 +77,11 @@ class AttributionModel:
             eval_acc: evaluated accuracy
             model: lstm model
         """
-        p = Input(shape=(self.seq_len, self.vocab_size), name="input_path")  # Seq_len
-        s = Input(shape=(self.hidden_len,), name="hidden_state")             # n_s
+        p = Input(shape=(self.seq_len, self.vocab_size), name="input_path")
+        s = Input(shape=(self.hidden_len,), name="hidden_state")
         t = Input(shape=(self.seq_len, 1), name="input_time")
 
-        a = LSTM(self.lstm_units, return_sequences=True)(p)                 #20, 64
+        a = LSTM(self.lstm_units, return_sequences=True)(p)
 
         context = self.time_attention(a, s, t)
         c = Flatten()(context)
@@ -93,6 +92,16 @@ class AttributionModel:
         print(self.model.summary())
 
     def softmax(self, x, axis=1):
+        """
+        Custom softmax function, used in the attention layer where
+        Time to conversion also is considered.
+        :param x:
+        :type x:
+        :param axis:
+        :type axis:
+        :return:
+        :rtype:
+        """
         ndim = K.ndim(x)
         if ndim == 2:
             x = K.softmax(x)
@@ -106,8 +115,19 @@ class AttributionModel:
         return x
 
     def train_model(self, loss="binary_crossentropy", opt=Adam, metrics="accuracy"):
+        """
+        Call for training the model on the specified training data
+        :param loss:
+        :type loss:
+        :param opt:
+        :type opt:
+        :param metrics:
+        :type metrics:
+        :return:
+        :rtype:
+        """
         self.model.compile(loss=loss,
-                           optimizer=opt(lr=self.learning_rate),
+                           optimizer=opt,
                            metrics=[metrics]
                            )
         self.history = self.model.fit(x=[self.X_train,  self.s0, self.X_train_time],
@@ -121,10 +141,16 @@ class AttributionModel:
 
     def evaluate_model(self):
         """
+        Evaluate model on test data
+        :return:
+        :rtype:
+        """
+        """
         Evaluates the score and prints the metrics and the corresponding score
         @return:
         """
-        scores = self.model.evaluate([self.X_test, self.s2, self.X_test_time], self.y_test, verbose=1)
+        scores = self.model.evaluate([self.X_test, self.s2, self.X_test_time],
+                                     self.y_test, verbose=1)
         print("%s: %ds.2%%" % (self.model.metrics_names[1], scores[1]*100))
 
     def predict(self, x_test=None, x_test_time=None):
@@ -176,13 +202,6 @@ class AttributionModel:
         alphas = activator(energies)
         # Use dotor together with "alphas" and "a" to compute the context vector to be given to the next layer
         return Dot(axes=1)([alphas, a])
-
-    def CIU(self):
-        pass
-
-    def _one_hot(x, num_classes):
-        return K.one_hot(K.cast(x, 'uint8'),
-                         num_classes=num_classes)
 
 
 def main():
@@ -240,6 +259,7 @@ def main():
     attrmod.train_model()
     attrmod.evaluate_model()
     print(attrmod.model_predict())
+
 
 if __name__ == "__main__":
     main()
