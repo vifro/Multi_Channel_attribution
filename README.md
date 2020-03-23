@@ -14,7 +14,10 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+- Python 3.x
+- Tensorflow > 1.15
+- keras 
+- Google Colaboratory or jupyter notebook 
 ```
 
 ### Installing
