@@ -27,6 +27,7 @@ class TouchPoints:
         :return:
         :rtype:
         """
+
         keys = list(self.values.values())
         values = list(self.names.values())
         return dict(zip(keys, values))
@@ -36,6 +37,7 @@ class TouchPoints:
         Get touchpoint values
         :return: Touchpoint values evenly divided between (0,1)
         """
+
         touchpoint_values = {}
         nr_touchpoints = len(self.names)
         for index, key in enumerate(self.names.keys()):
