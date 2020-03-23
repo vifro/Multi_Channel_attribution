@@ -35,7 +35,12 @@ A testrun can be viewed in the notebook Multi_Channel_Attribution_Final.ipynb af
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* Kary Främling and 
 * Publicis Media Denmark
 * Umeå University
+*   Sule Anjomshoae, Kary Främling and Amro Najjar
+```
+ “Explanations of Black-Box Model Predictions by Contextual Importance and Utility”, 
+ EXplainable, TRansparent Autonomous Agents and Multi-Agent Systems, (EXTRAAMAS 2019)
+ ```
+
+
