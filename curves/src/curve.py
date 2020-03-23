@@ -40,6 +40,11 @@ class Curve:
 
 
     def plot_curve(self):
+        """
+        Help function for displaying the curve
+        :return:
+        :rtype:
+        """
         plt.stem(self.x, self.y, 'r')
         plt.plot(self.x, self.y)
         plt.title("name: " + self.hyp_func.__name__ + ",rate: " + str(self.fs) + ",frequency: " + str(self.f)
@@ -65,6 +70,7 @@ class Curve:
         self._normalize()
 
     def _normalize(self):
+
         self.y = (self.y - self.y.min(0)) / self.y.ptp(0)
 
     def time_distribution(self):

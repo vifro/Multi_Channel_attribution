@@ -15,7 +15,7 @@ class ANN():
 
     def nn_model(self):
         """
-        This model builds a model with specified parameters.
+        Builds a model with specified parameters.
 
         @param input_size:
         @param nr_features:

@@ -6,15 +6,6 @@ class CIU:
     def __init__(self):
         pass
 
-    def hello_name(self):
-        print("Hello. what are you doing")
-
-    def findmin(self):
-        pass
-
-    def findmax(self):
-        pass
-
     def calculate_CU(self, y, dymin, dymax):
 
         """
