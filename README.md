@@ -15,6 +15,7 @@ Donwload the specified packages.
 - Tensorflow >= 1.15.0
 - keras >= 2.2.4
 - Numpy >= 2.7.0
+- sklearn
 - Google Colaboratory or jupyter notebook 
 ```
 
