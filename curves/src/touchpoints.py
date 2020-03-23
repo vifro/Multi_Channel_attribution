@@ -22,11 +22,20 @@ class TouchPoints:
         self.translator = self.reverse()
 
     def reverse(self):
+        """
+        Reverse lists of key and values
+        :return:
+        :rtype:
+        """
         keys = list(self.values.values())
         values = list(self.names.values())
         return dict(zip(keys, values))
 
     def touchpoint_values(self):
+        """
+        Get touchpoint values
+        :return: Touchpoint values evenly divided between (0,1)
+        """
         touchpoint_values = {}
         nr_touchpoints = len(self.names)
         for index, key in enumerate(self.names.keys()):
@@ -34,6 +43,11 @@ class TouchPoints:
         return touchpoint_values
 
     def conversion(self, conversion_rate):
+        """
+        Randomize conversions
+        :param conversion_rate:
+        :return: List of conversions
+        """
         conversions = []
         nums = np.zeros(len(self.curves), dtype=bool)
         last = np.math.ceil(len(self.curves) * conversion_rate)
@@ -50,6 +64,10 @@ class TouchPoints:
         return conversions
 
     def random_curve(self):
+        """
+        Random Curve
+        :return:
+        """
         index = np.random.randint(0, len(self.curves)-1)
 
         return self.curves[index], self.conversions[index]
