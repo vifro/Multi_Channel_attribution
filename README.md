@@ -11,7 +11,7 @@ Donwload the specified packages.
 ### Prerequisites
 
 ```
-- Python >=3.x
+- Python >=3.7
 - Tensorflow >= 1.15.0
 - keras >= 2.2.4
 - Numpy >= 2.7.0
